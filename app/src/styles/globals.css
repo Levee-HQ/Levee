@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --color-deep: #0B2545;
+    --color-mid: #13507A;
+    --color-surface: #1B6CA8;
+    --color-light: #A3D5FF;
+    --color-mark: #E8F4FD;
+    --color-trigger: #FF6B35;
+  }
+
+  body {
+    @apply bg-levee-deep text-levee-mark font-body antialiased;
+  }
+
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-levee-surface text-levee-mark px-6 py-3 rounded-lg font-semibold
+           hover:bg-levee-mid transition-colors duration-150
+           focus:outline-none focus:ring-2 focus:ring-levee-light focus:ring-offset-2 focus:ring-offset-levee-deep;
+  }
+
+  .btn-secondary {
+    @apply border border-levee-surface text-levee-light px-6 py-3 rounded-lg font-semibold
+           hover:bg-levee-surface/10 transition-colors duration-150
+           focus:outline-none focus:ring-2 focus:ring-levee-light focus:ring-offset-2 focus:ring-offset-levee-deep;
+  }
+
+  .card {
+    @apply bg-levee-deep/80 border border-levee-mid/30 rounded-xl p-6 backdrop-blur-sm;
+  }
+
+  .input-field {
+    @apply bg-levee-deep border border-levee-mid/50 rounded-lg px-4 py-3 text-levee-mark
+           placeholder:text-levee-light/40 font-tabular
+           focus:outline-none focus:ring-2 focus:ring-levee-surface focus:border-transparent;
+  }
+}

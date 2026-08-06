@@ -1,0 +1,40 @@
+name: App
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "packages/**"
+  pull_request:
+    paths:
+      - "app/**"
+      - "packages/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck SDK
+        run: pnpm --filter @levee/sdk run lint
+
+      - name: Build SDK
+        run: pnpm --filter @levee/sdk run build
+
+      - name: Typecheck App
+        run: pnpm --filter @levee/app run typecheck
+
+      - name: Build App
+        run: pnpm --filter @levee/app run build

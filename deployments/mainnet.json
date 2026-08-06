@@ -1,0 +1,11 @@
+{
+  "network": "mainnet",
+  "deployed_at": null,
+  "contracts": {
+    "registry": "",
+    "pool": "",
+    "policy": "",
+    "oracle": "",
+    "settlement": ""
+  }
+}

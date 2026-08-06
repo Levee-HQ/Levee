@@ -1,0 +1,33 @@
+# Rust / Soroban build artifacts
+target/
+**/*.wasm
+vendor/
+
+# Node / pnpm
+node_modules/
+.next/
+dist/
+.turbo/
+coverage/
+
+# Environment & secrets — never commit real or placeholder keys
+.env
+.env.local
+.env.*.local
+.env.testnet
+.env.mainnet
+
+# Stellar CLI local state (may cache identities/keys)
+.stellar/
+
+# OS / editor cruft
+.DS_Store
+*.log
+npm-debug.log*
+
+# Fuzzing artifacts
+fuzz/artifacts/
+fuzz/corpus/
+
+# Claude Code local session/project state (not part of the codebase)
+.claude/
