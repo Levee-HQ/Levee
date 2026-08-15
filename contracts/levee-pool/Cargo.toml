@@ -1,7 +1,11 @@
 [package]
 name = "levee-pool"
-version = "0.1.0"
-edition = "2021"
+description = "Share-based capital pool for underwriter deposits and cover payouts"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
 
 [lib]
 crate-type = ["cdylib", "rlib"]

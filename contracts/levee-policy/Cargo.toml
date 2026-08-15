@@ -1,7 +1,11 @@
 [package]
 name = "levee-policy"
-version = "0.1.0"
-edition = "2021"
+description = "Cover position lifecycle — quote, buy, settle, and expire policies"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
 
 [lib]
 crate-type = ["cdylib", "rlib"]
