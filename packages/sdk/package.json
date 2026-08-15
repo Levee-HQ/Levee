@@ -1,10 +1,18 @@
 {
   "name": "@levee/sdk",
   "version": "0.1.0",
+  "description": "TypeScript SDK for the Levee parametric cover protocol — premium calculation and contract interfaces",
   "private": true,
+  "license": "Apache-2.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "stellar",
+    "soroban",
+    "parametric-insurance",
+    "sdk"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
