@@ -1,6 +1,7 @@
 {
   "name": "@levee/app",
   "version": "0.1.0",
+  "description": "Next.js frontend for the Levee parametric cover protocol — buy cover, underwrite pools, and track positions on Stellar",
   "private": true,
   "scripts": {
     "dev": "next dev",
