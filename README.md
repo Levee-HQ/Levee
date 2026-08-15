@@ -1,7 +1,7 @@
 # Levee: Parametric Insurance for Stellar DeFi
 
-[![Contracts](https://github.com/am-samuel/Levee/actions/workflows/contracts.yml/badge.svg)](https://github.com/am-samuel/Levee/actions/workflows/contracts.yml)
-[![App](https://github.com/am-samuel/Levee/actions/workflows/app.yml/badge.svg)](https://github.com/am-samuel/Levee/actions/workflows/app.yml)
+[![Contracts](https://github.com/Levee-HQ/Levee/actions/workflows/contracts.yml/badge.svg)](https://github.com/Levee-HQ/Levee/actions/workflows/contracts.yml)
+[![App](https://github.com/Levee-HQ/Levee/actions/workflows/app.yml/badge.svg)](https://github.com/Levee-HQ/Levee/actions/workflows/app.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 Levee is a parametric cover protocol for Stellar that protects DeFi positions against oracle-driven losses. When oracle deviations persist beyond a sustain window, covered positions are automatically compensated at settlement time—no claims, no review.
