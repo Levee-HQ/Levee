@@ -11,6 +11,10 @@ on:
       - "app/**"
       - "packages/**"
 
+concurrency:
+  group: app-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest

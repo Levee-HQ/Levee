@@ -13,6 +13,10 @@ on:
       - "Cargo.toml"
       - "Cargo.lock"
 
+concurrency:
+  group: contracts-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest
