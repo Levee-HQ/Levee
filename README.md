@@ -1,8 +1,14 @@
 # Levee: Parametric Insurance for Stellar DeFi
 
+[![Contracts](https://github.com/am-samuel/Levee/actions/workflows/contracts.yml/badge.svg)](https://github.com/am-samuel/Levee/actions/workflows/contracts.yml)
+[![App](https://github.com/am-samuel/Levee/actions/workflows/app.yml/badge.svg)](https://github.com/am-samuel/Levee/actions/workflows/app.yml)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 Levee is a parametric cover protocol for Stellar that protects DeFi positions against oracle-driven losses. When oracle deviations persist beyond a sustain window, covered positions are automatically compensated at settlement time—no claims, no review.
 
-**Status:** Phase 5 complete. Ready for testnet deployment.
+**Status:** v0.1.0 — Ready for testnet deployment.
+
+**Live demo:** [levee-app-theta.vercel.app](https://levee-app-theta.vercel.app/)
 
 ## What is Parametric Insurance?
 
@@ -14,6 +20,8 @@ Traditional insurance requires a claims process to prove loss. Parametric insura
 - **No argument, no wait:** Payout reflects your policy amount (up to pool solvency)
 
 **Basis risk exists:** You might get paid and have no loss, or suffer a loss the trigger doesn't catch. That tradeoff is intentional—you get predictability and speed.
+
+
 
 ## Architecture
 
