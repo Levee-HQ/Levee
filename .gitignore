@@ -24,6 +24,17 @@ coverage/
 .DS_Store
 *.log
 npm-debug.log*
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Deployment
+.vercel/
 
 # Fuzzing artifacts
 fuzz/artifacts/
