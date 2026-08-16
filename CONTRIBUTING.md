@@ -35,9 +35,13 @@ cd app && pnpm install && pnpm build
 - Include test coverage for new functionality
 - Update docs if behavior changes
 
-## What not to add
+## Issues
+
+Found a bug or have a feature idea? [Open an issue](https://github.com/Levee-HQ/Levee/issues) on GitHub.
+
+## What not to add (v0 scope)
 
 - Governance tokens, DAOs, or tokenomics
-- Perils beyond oracle deviation (v0 scope)
+- Perils beyond oracle deviation
 - Custom oracle implementations — use Reflector
 - Browser localStorage for anything that matters
