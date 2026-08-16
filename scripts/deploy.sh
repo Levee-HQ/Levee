@@ -12,13 +12,13 @@ fi
 source .env
 
 echo "Building WASM artifacts..."
-cargo build --workspace --target wasm32v1-none --release
+cargo build --workspace --target wasm32-unknown-unknown --release
 
 CONTRACTS=(levee-registry levee-pool levee-policy levee-oracle levee-settlement)
 declare -A CONTRACT_IDS
 
 for contract in "${CONTRACTS[@]}"; do
-  WASM="target/wasm32v1-none/release/${contract//-/_}.wasm"
+  WASM="target/wasm32-unknown-unknown/release/${contract//-/_}.wasm"
   if [ ! -f "$WASM" ]; then
     echo "Error: WASM not found at $WASM"
     exit 1
