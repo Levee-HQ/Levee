@@ -39,3 +39,9 @@ A formal security audit through the Soroban Security Audit Bank is planned for v
 ## Bug Bounty
 
 No formal bug bounty program exists for v0. Responsible disclosures are appreciated and will be credited.
+
+## Links
+
+- Repository: https://github.com/Levee-HQ/Levee
+- Issues: https://github.com/Levee-HQ/Levee/issues
+- Contributing: [CONTRIBUTING.md](CONTRIBUTING.md)
