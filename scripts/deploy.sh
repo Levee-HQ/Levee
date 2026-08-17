@@ -1,6 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+usage() {
+  echo "Usage: $0 [network]"
+  echo ""
+  echo "Deploy all Levee contracts to a Stellar network."
+  echo ""
+  echo "Arguments:"
+  echo "  network    Target network (default: testnet)"
+  echo ""
+  echo "Environment:"
+  echo "  Requires a .env file with DEPLOYER_SECRET_KEY set."
+  echo "  See .env.example for all variables."
+}
+
+if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
+  usage
+  exit 0
+fi
+
 NETWORK="${1:-testnet}"
 echo "Deploying Levee contracts to $NETWORK..."
 
@@ -10,6 +28,11 @@ if [ ! -f .env ]; then
 fi
 
 source .env
+
+if [ -z "${DEPLOYER_SECRET_KEY:-}" ]; then
+  echo "Error: DEPLOYER_SECRET_KEY is not set in .env"
+  exit 1
+fi
 
 echo "Building WASM artifacts..."
 cargo build --workspace --target wasm32-unknown-unknown --release
