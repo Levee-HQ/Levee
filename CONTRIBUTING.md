@@ -1,18 +1,57 @@
 # Contributing to Levee
 
+Thank you for your interest in contributing to Levee! This guide will help you get started.
+
 ## Getting started
 
+### Prerequisites
+
+- Rust (see `rust-toolchain.toml` for the pinned version)
+- [Stellar CLI](https://developers.stellar.org/docs/tools/cli)
+- Node.js 18+
+- pnpm 9.15+
+
+### Setup
+
 ```bash
-# Prerequisites: Rust, stellar-cli, Node.js 18+, pnpm
+# Install Stellar CLI
 cargo install --locked stellar-cli
+
+# Add the WASM target
 rustup target add wasm32-unknown-unknown
+
+# Install Node dependencies
+pnpm install
 
 # Build and test contracts
 cargo test --workspace
 cargo clippy --workspace -- -D warnings
 
-# Build frontend
-cd app && pnpm install && pnpm build
+# Build SDK and frontend
+pnpm run build
+
+# Run the frontend locally
+pnpm run dev
+```
+
+## Development workflow
+
+1. Fork the repo and create a branch from `main`
+2. Make your changes
+3. Run the checks below before pushing
+4. Open a pull request
+
+### Pre-push checks
+
+```bash
+# Rust
+cargo fmt --all -- --check
+cargo clippy --workspace -- -D warnings
+cargo test --workspace
+
+# TypeScript
+pnpm run lint
+pnpm run build
 ```
 
 ## Contracts
@@ -45,3 +84,7 @@ Found a bug or have a feature idea? [Open an issue](https://github.com/Levee-HQ/
 - Perils beyond oracle deviation
 - Custom oracle implementations — use Reflector
 - Browser localStorage for anything that matters
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
