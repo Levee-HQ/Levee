@@ -21,9 +21,11 @@
     "pnpm": ">=9.15.0"
   },
   "scripts": {
+    "dev": "pnpm --filter @levee/app dev",
     "build": "pnpm -r build",
     "test": "pnpm -r test",
     "lint": "pnpm -r --parallel lint",
-    "typecheck": "pnpm -r --filter @levee/app typecheck"
+    "typecheck": "pnpm -r --filter @levee/app typecheck",
+    "clean": "rm -rf app/.next packages/sdk/dist"
   }
 }
