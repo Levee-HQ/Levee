@@ -205,6 +205,7 @@ pnpm dev
 - **[docs/incident-feb-2026.md](docs/incident-feb-2026.md)** — Real case study with Levee simulation
 - **[SECURITY.md](SECURITY.md)** — Security considerations & disclosure policy
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — How to contribute
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** — Community guidelines
 - **[CHANGELOG.md](CHANGELOG.md)** — Version history
 
 ## Testing
